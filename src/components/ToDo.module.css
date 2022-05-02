@@ -1,0 +1,39 @@
+a {
+    color: #8ca6ce;
+    font-size: 1.6rem;
+}
+
+.list {
+    display: grid;
+    padding: 5px 0 5px 5px;
+    margin-bottom: 5px;
+    border-bottom: 1.4px solid rgb(214, 214, 214);
+    grid-template-columns: 8fr 1fr 1fr;
+}
+
+.toDo {
+    margin-left: 0.6em;
+}
+
+.linkBtn,
+.deleteBtn {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 80ms;
+}
+
+.linkBtn {
+    font-size: larger;
+}
+
+.deleteBtn {
+    color: #fbcac9;
+}
+
+.linkBtn:hover,
+.deleteBtn:hover {
+    transform: scale(1.2);
+}
