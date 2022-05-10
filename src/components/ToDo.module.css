@@ -1,8 +1,3 @@
-a {
-    color: #8ca6ce;
-    font-size: 1.6rem;
-}
-
 .list {
     display: grid;
     padding: 5px 0 5px 5px;
@@ -27,6 +22,11 @@ a {
 
 .linkBtn {
     font-size: larger;
+}
+
+.linkIcon {
+    color: #8ca6ce;
+    font-size: 1.6rem;
 }
 
 .deleteBtn {

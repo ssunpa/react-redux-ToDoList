@@ -25,7 +25,7 @@ const Home = (props) => {
     }
 
     return (
-        <div className={style.container}>
+        <section className={style.container}>
             <h1 className={style.title}>To Do List</h1>
             <form className={style.form} onSubmit={onSubmit}>
                 <input
@@ -41,7 +41,7 @@ const Home = (props) => {
                     <ToDo {...todo} key={todo.id} />
                 ))}
             </ul>
-        </div>
+        </section>
     );
 };
 

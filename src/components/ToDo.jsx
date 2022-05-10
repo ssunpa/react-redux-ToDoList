@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { actionCreators } from '../store';
 import style from './ToDo.module.css';
 
-const ToDo = ({ text, id }) => {
+const ToDo = ({ title, id }) => {
     const dispatch = useDispatch();
 
     function deleteToDo(id) {
@@ -21,11 +21,14 @@ const ToDo = ({ text, id }) => {
     }
     return (
         <li className={style.list}>
-            <span className={style.toDo}>{text}</span>
+            <span className={style.toDo}>{title}</span>
 
             <button className={style.linkBtn}>
                 <Link to={`/${id}`}>
-                    <FontAwesomeIcon icon={faSquareArrowUpRight} />
+                    <FontAwesomeIcon
+                        className={style.linkIcon}
+                        icon={faSquareArrowUpRight}
+                    />
                 </Link>
             </button>
 

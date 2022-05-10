@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+    background: linear-gradient(to right, #fbcac9, #8ca6ce);
+    display: flex;
+}
