@@ -48,7 +48,12 @@ const reducer = (state = [], action) => {
         case DELETE_TODO:
             return state.filter((toDo) => toDo.id !== action.id);
         case DELETE_DETAIL:
-            return [];
+            return state.map((toDo) => {
+                if (toDo.id === action.id) {
+                    delete toDo.text;
+                }
+                return toDo;
+            });
         default:
             return state;
     }

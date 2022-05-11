@@ -64,11 +64,11 @@
 }
 
 .deleteBtn:hover {
-    color: #8ca6ce;
-    transform: scale(1.2);
+    color: #ff6c6c;
+    transform: scale(1.3);
 }
 
 .saveBtn:hover {
-    color: #fbcac9;
-    transform: scale(1.2);
+    color: #69ff3b;
+    transform: scale(1.3);
 }

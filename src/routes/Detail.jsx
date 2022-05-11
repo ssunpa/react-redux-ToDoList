@@ -4,7 +4,7 @@ import {
     faCircleXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { actionCreators } from '../store';
@@ -18,13 +18,16 @@ const Detail = () => {
     const toDo = toDos.find((todo) => todo.id === parseInt(id));
 
     const [text, setText] = useState('');
+    const textRef = useRef();
 
     function addDetail(text) {
         dispatch(actionCreators.addDetail(text, parseInt(id)));
+        console.log(toDo);
     }
 
     function deleteDetail() {
-        dispatch(actionCreators.deleteDetail());
+        dispatch(actionCreators.deleteDetail(parseInt(id)));
+        console.log(toDo);
     }
 
     function onChange(e) {
@@ -36,8 +39,9 @@ const Detail = () => {
         addDetail(text);
     }
 
-    function onDeleteClick() {
+    function onDeleteClick(e) {
         deleteDetail();
+        textRef.current.value = '';
     }
 
     return (
@@ -53,11 +57,11 @@ const Detail = () => {
                 </button>
                 <h1>{toDo?.title}</h1>
             </header>
-            <textarea className={style.text} onChange={onChange}>
+            <textarea ref={textRef} className={style.text} onChange={onChange}>
                 {toDo?.text}
             </textarea>
             <footer className={style.footer}>
-                <button className={style.deleteBtn}>
+                <button className={style.deleteBtn} onClick={onDeleteClick}>
                     <FontAwesomeIcon icon={faCircleXmark} />
                 </button>
                 <button className={style.saveBtn} onClick={onSaveClick}>
