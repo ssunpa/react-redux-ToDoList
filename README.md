@@ -1,3 +1,23 @@
-# Vailla React-Redux
+# To Do List
 
-To do list using react-redux
+-   개요
+
+    -   To Do List
+    -   해야할 일을 추가하고 삭제하는 웹 페이지
+
+-   목표
+    -   react-redux를 사용할 수 있다.
+    -   CRUD를 구현할 수 있다.
+    -   react-router를 사용해 화면전환을 할 수 있다.
+-   페이지 구성 및 기능
+    -   HOME
+        -   form을 이용해 해야할 일을 추가
+        -   추가된 할 일은 리스트 ui로 정렬
+        -   삭제 버튼과 디테일 버튼을 자동 삽입
+        -   디테일 버튼 클릭 시 해당 할 일의 고유 id를 이용해 해당 할 일의 DETAIL 페이지로 이동
+        -   삭제 버튼 클릭 시 해당 할 일을 제거
+    -   DETAIL
+        -   리스트의 디테일 버튼을 누르면 이동하는 페이지
+        -   상단의 해당 할 일을 title로 보여줌
+        -   중앙 부분에 디테일을 추가할 수 있는 textarea 배치
+        -   textarea의 내용을 저장할 수 있는 버튼과 삭제(초기화)할 수 있는 버튼을 하단에 배치
